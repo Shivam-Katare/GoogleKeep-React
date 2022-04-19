@@ -1,5 +1,3 @@
-import Icon from '@mui/material/Icon'
-import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 function Note(props) {
 

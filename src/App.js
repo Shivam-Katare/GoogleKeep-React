@@ -3,11 +3,24 @@ import Footer from './components/Footer';
 import Header from './components/Header'
 import Note from './components/Note';
 import CreateArea from './components/CreateArea';
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+
+
+//Get the Locaal Storage
+
+const getLocalItems = () => {
+  let lists = localStorage.getItem('list');
+  console.log('list');
+  if (lists) {
+    return JSON.parse(localStorage.getItem("list"));
+  } else {
+    return [];
+  }
+}
 
 
 function App() {
-  const [notes, setNotes] = useState([]); //notes array
+  const [notes, setNotes] = useState(getLocalItems); //notes array
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
@@ -23,6 +36,11 @@ function App() {
     })
   }
 
+  //add data to local storage
+  useEffect(() => {
+    localStorage.setItem('list',JSON.stringify(notes))
+  }, [notes] )
+
   return (
     <>
       <Header />
@@ -36,7 +54,6 @@ function App() {
           onDelete={deleteNote}
         />
       })}
-      {/* <Note key={1} title="Note title" content="Note content" /> */}
       <Footer />
     </>
   );

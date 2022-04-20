@@ -4,8 +4,9 @@
 📌 UseState
 📌 Spred operator
 📌 .map(), .filter() and many more like this.
+📌 Use LocalStorage() to save the notes data
 
-📍 For Sttyling I use CSS and Material UI.
+📍 For Styling I use CSS and Material UI.
 
 # ScreenShots :
 
@@ -22,9 +23,6 @@
 
 ![2022-04-12](https://user-images.githubusercontent.com/91705825/162983964-47f646b3-3c04-41e8-9100-edca12e7056c.png)
 
-
-# NOTE
-Working On Backend
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

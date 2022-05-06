@@ -5,9 +5,7 @@ import Note from './components/Note';
 import CreateArea from './components/CreateArea';
 import React, { useEffect, useState } from "react"
 
-
 //Get the Locaal Storage
-
 const getLocalItems = () => {
   let lists = localStorage.getItem('list');
   console.log('list');
@@ -17,7 +15,6 @@ const getLocalItems = () => {
     return [];
   }
 }
-
 
 function App() {
   const [notes, setNotes] = useState(getLocalItems); //notes array
@@ -58,5 +55,4 @@ function App() {
     </>
   );
 }
-
 export default App;
